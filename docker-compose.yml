@@ -13,6 +13,10 @@ services:
       - ./config/ddclient.conf.noip:/config/ddclient.conf
     networks:
       docker:
+    dns:
+      - 8.8.8.8
+      - 4.4.4.4
+      - 192.168.50.1     
     logging:
       options:
         max-size: 100M
@@ -29,6 +33,10 @@ services:
       - ./config/ddclient.conf.dedyn:/config/ddclient.conf
     networks:
       docker:
+    dns:
+      - 8.8.8.8
+      - 4.4.4.4
+      - 192.168.50.1      
     logging:
       options:
         max-size: 100M
